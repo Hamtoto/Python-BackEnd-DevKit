@@ -1,3 +1,5 @@
 /.claude
-/.mcp/*
+/.mcp/serena-env/*
+
+!/.mcp/serena-env
 !/.mcp/*.sh
