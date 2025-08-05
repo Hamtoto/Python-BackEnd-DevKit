@@ -79,12 +79,6 @@ USER $USERNAME
 # Install Claude Code CLI
 RUN sudo npm install -g @anthropic-ai/claude-code
 
-# Install Memory Bank MCP
-RUN sudo mkdir -p /workspace/.mcp/memory-bank && \
-    cd /workspace/.mcp/memory-bank && \
-    sudo npm install @aakarsh-sasi/memory-bank-mcp && \
-    sudo chown -R $USERNAME:$USERNAME /workspace/.mcp/memory-bank
-
 # Install pyenv for Python version management
 RUN curl https://pyenv.run | bash
 ENV PATH="/home/vscode/.pyenv/bin:$PATH"

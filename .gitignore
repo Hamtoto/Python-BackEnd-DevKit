@@ -4,8 +4,6 @@
 /.claude
 /.mcp/serena-env/*
 /.serena
-/.mcp/memory-bank/*
-
 
 # Ignore all files in the serena environment
 !/.mcp/serena-env
