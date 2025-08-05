@@ -36,11 +36,11 @@ Python 개발을 위한 DevContainer 환경
 필요시 Serena MCP 서버를 수동으로 실행할 수 있습니다:
 
 ```bash
-cd /workspace/.mcp
+cd .mcp
 ./start-serena.sh
 ```
 
 ## 트러블슈팅
 
 - MCP 서버가 인식되지 않는 경우: Claude Code 재시작 후 다시 시도
-- 권한 오류: `chmod +x /workspace/.mcp/start-serena.sh` 실행
+- 권한 오류: `chmod +x .mcp/start-serena.sh` 실행

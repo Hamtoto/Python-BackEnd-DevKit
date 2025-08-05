@@ -1,5 +1,10 @@
+# This is a comment in a .gitignore file
+
+# Ignore all files in the .mcp directory
 /.claude
 /.mcp/serena-env/*
+/.serena
 
+# Ignore all files in the serena environment
 !/.mcp/serena-env
 !/.mcp/*.sh

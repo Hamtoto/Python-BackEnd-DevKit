@@ -4,7 +4,7 @@
 echo "Setting up Serena MCP server..."
 
 # Navigate to serena-env directory
-cd /workspace/.mcp/serena-env
+cd .mcp/serena-env
 
 # Create pyenv virtual environment for serena
 eval "$(pyenv init -)"
