@@ -1,0 +1,44 @@
+{
+  "name": "Python-3.12-Backend-DevContainer",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportUnusedImport": "information",
+      "reportUnusedVariable": "information"
+    }
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.flake8",
+    "ms-python.black-formatter",
+    "anthropic.claude-code",
+    "ms-vscode.vscode-json"
+  ],
+  "remoteUser": "vscode",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Python Backend",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "chmod +x .devcontainer/setup-mcp.sh && .devcontainer/setup-mcp.sh && echo 'DevContainer ready!'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": true
+        },
+        "files.associations": {
+          "*.json": "jsonc"
+        }
+      }
+    }
+  }
+}

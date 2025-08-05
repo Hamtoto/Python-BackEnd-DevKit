@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..  # Parent directory (project root)
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        PYTHON_VERSION: 3.12
+
+    volumes:
+      - ..:/workspace:cached  # Mount project root
+
+    ports:
+      - "8000:8000"  # Python backend port
+    container_name: Python-Backend-DevKit-Container
+    init: true
